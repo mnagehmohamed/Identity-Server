@@ -1,0 +1,91 @@
+﻿
+@using System.Text.RegularExpressions;
+
+
+<MudDialog>
+    <TitleContent>
+        @if (IsEdit)
+        {
+            <MudText Typo="Typo.h6">
+
+                <MudIcon Color="Color.Primary" Icon="@Icons.Material.Filled.Edit" Class="mr-3 mb-n1" />
+                Edit User @entity.UserName
+            </MudText>
+
+
+        }
+        else
+        {
+            <MudText Typo="Typo.h6">
+
+                <MudIcon Color="Color.Info" Icon="@Icons.Material.Filled.Add" Class="mr-3 mb-n1" />
+                Create User
+
+            </MudText>
+
+        }
+    </TitleContent>
+    <DialogContent>
+        <MudContainer Style="max-height: 80vh;overflow-y: scroll;" Class="py-1">
+            <EditForm Model="@entity" OnValidSubmit="DoSubmit">
+                <DataAnnotationsValidator />
+                <MudCard>
+                    <MudCardContent>
+
+                        <MudGrid>
+
+                            <MudItem xs="12" sm="12" Class="py-0">
+                                <MudTextField Label="User Name"
+                                              MaxLength=50
+                                              HelperText="User Name"
+                                                    HelperTextOnFocus
+                                              @bind-Value="entity.UserName"
+                                              For="@(() => entity.UserName)"
+                                              Variant="Variant.Outlined"
+                                              Margin="Margin.Dense"
+                                              Adornment="Adornment.End" AdornmentIcon=@(!string.IsNullOrEmpty(entity.UserName)?(@Icons.Material.Filled.CheckCircle):"") AdornmentColor="Color.Success" />
+                                </MudItem>
+                                <MudItem xs="12" sm="12" Class="py-0">
+                                <MudTextField Label="Email"
+                                              MaxLength=50
+                                              HelperText="Email"
+                                                    HelperTextOnFocus
+                                              @bind-Value="entity.Email"
+                                              For="@(() => entity.Email)"
+                                              Variant="Variant.Outlined"
+                                              Margin="Margin.Dense"
+                                              Adornment="Adornment.End" AdornmentIcon=@((!string.IsNullOrEmpty(entity.Email))?(@Icons.Material.Filled.CheckCircle):"") AdornmentColor="Color.Success" />
+                                </MudItem>
+                              
+
+                        </MudGrid>
+
+                    </MudCardContent>
+                    <MudCardActions>
+                                @if (IsEdit)
+                                {
+                            <MudButton ButtonType="ButtonType.Submit"
+                                   Variant="Variant.Filled"
+                                          FullWidth
+                                   Color="Color.Info">
+                                   Edit
+                            </MudButton>
+                        }
+                                else
+                                {
+                            <MudButton ButtonType="ButtonType.Submit"
+                                   Variant="Variant.Filled"
+                                          FullWidth
+                                   Color="Color.Primary">
+                            Create
+                            </MudButton>
+                                }
+
+                    </MudCardActions>
+                </MudCard>
+
+            </EditForm>
+        </MudContainer>
+
+    </DialogContent>
+</MudDialog>

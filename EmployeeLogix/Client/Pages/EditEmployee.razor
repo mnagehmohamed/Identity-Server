@@ -1,0 +1,101 @@
+﻿@page "/EditEmployee"
+
+<MudDialog>
+    <TitleContent>
+
+            <MudText Typo="Typo.h6">
+
+                <MudIcon Color="Color.Info" Icon="@Icons.Material.Filled.Add" Class="mr-3 mb-n1" />
+               Edit Employee
+            </MudText>
+
+    </TitleContent>
+
+    <DialogContent>
+        <MudContainer Style="max-height: 80vh;overflow-y: scroll;" Class="py-2">
+            <EditForm Model="@entity" OnValidSubmit="DoSubmit">
+                <DataAnnotationsValidator />
+                <MudCard>
+                    <MudCardContent>
+                        <MudGrid>
+
+
+
+                            <MudItem xs="12" sm="6" Class="py-0">
+                                <MudTextField Label="Name"
+                                              MaxLength=50
+                                              Class="mt-4"
+                                              Immediate="false"
+                                              HelperText="Please Insert Name"
+                                                    HelperTextOnFocus
+                                              @bind-Value="entity.Name"
+                                              For="@(() => entity.Name)"
+                                              Variant="Variant.Outlined"
+                                              Margin="Margin.Dense"/>
+                                </MudItem>
+
+                                <MudItem xs="12" sm="6" Class="py-0">
+                                <MudTextField Label="Email"
+                                              MaxLength=50
+                                              Class="mt-4"
+                                              Immediate="false"
+                                              HelperText="Please Insert Email"
+                                                    HelperTextOnFocus
+                                              @bind-Value="entity.Email"
+                                              For="@(() => entity.Email)"
+                                              Variant="Variant.Outlined"
+                                              Margin="Margin.Dense"
+                                             />
+                                </MudItem>
+
+                                <MudItem xs="12" sm="6" Class="py-0">
+                                <MudTextField Label="BirthDate"
+                                              MaxLength=50
+                                              Class="mt-4"
+                                              Immediate="false"
+                                              HelperText="Please Insert BirthDate"
+                                                    HelperTextOnFocus
+                                              @bind-Value="entity.BirthDate"
+                                              For="@(() => entity.BirthDate)"
+                                              Variant="Variant.Outlined"
+                                              Margin="Margin.Dense" />
+                                </MudItem>
+                                <MudItem xs="12" sm="6" Class="py-0">
+                                <MudTextField Label="Salary"
+                                              MaxLength=50
+                                              Class="mt-4"
+                                              Immediate="false"
+                                              HelperText="Please Insert Salary"
+                                                    HelperTextOnFocus
+                                              @bind-Value="entity.Salary"
+                                              For="@(() => entity.Salary)"
+                                              Variant="Variant.Outlined"
+                                              Margin="Margin.Dense" />
+                                </MudItem>
+                                <MudItem xs="12" sm="6" Class="py-0">
+                                <MudCheckBox  @bind-Checked="@entity.Status" Dense="true" Color="Color.Success"></MudCheckBox>
+
+                                </MudItem>
+                                </MudGrid>
+
+
+
+
+                                </MudCardContent>
+                                <MudCardActions>
+                                <MudButton ButtonType="ButtonType.Submit"
+                                   Variant="Variant.Filled"
+                                      FullWidth
+                                   Color=Color.Info>
+                           
+                         Edit
+                       
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+
+            </EditForm>
+        </MudContainer>
+
+    </DialogContent>
+</MudDialog>

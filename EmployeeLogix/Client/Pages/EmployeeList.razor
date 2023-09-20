@@ -1,0 +1,122 @@
+﻿@page "/EmployeePage"
+@using EmployeeLogix.Shared.Models;
+
+@if (AllEmployees == null)
+{
+    <div class="loader">
+
+    </div>
+
+}
+else{
+    <div>
+    <div class="d-flex align-center justify-space-between mt-10">
+        <MudText Align="Align.Start" Typo="Typo.h5">Employees</MudText>
+    </div>
+
+
+        <MudTable Items="@AllEmployees"
+              T="Employee"
+              Dense="true"
+              Hover="true"
+              Bordered="true"
+              Striped="true"
+              Breakpoint="Breakpoint.MdAndDown"
+                FixedHeader
+              Height="50vh"
+              Style="margin-bottom:20px"
+             >
+        <NoRecordsContent>
+           No Employee Found
+        </NoRecordsContent>
+        <HeaderContent>
+            <MudTh>Name</MudTh>
+            <MudTh>Email</MudTh>
+            <MudTh>Birth Date</MudTh>
+            <MudTh>Salary</MudTh>
+            <MudTh>Status</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@context.Name</MudTd>
+                <MudTd>@context.Email</MudTd>
+                <MudTd>@context.BirthDate</MudTd>
+                <MudTd>@context.Salary</MudTd>
+                <MudTd>
+                <MudCheckBox ReadOnly  @bind-Checked="@context.Status" Dense="true" Color="Color.Success"></MudCheckBox>
+
+                </MudTd>
+              
+                <MudTd id="Active">
+                    <MudStack Row
+                          Justify=Justify.FlexStart
+                          Spacing=2>
+
+                    <MudTooltip Placement="Placement.Bottom"
+                                        Arrow
+                                Text="Edit"
+                                RootStyle="width: fit-content;"
+                                        Inline>
+                        <MudButton  StartIcon="@Icons.Material.Filled.Edit"
+                                   Size=Size.Small
+                                   Color=Color.Primary
+                                   Variant="Variant.Filled"
+                                   OnClick="()=>UpdateTask(context)">
+                            Edit
+                        </MudButton>
+                    </MudTooltip>
+                    <MudTooltip Placement="Placement.Bottom"
+                                        Arrow
+                                Text="Delete"
+                                RootStyle="width: fit-content;"
+                                        Inline>
+                        <MudButton  StartIcon="@Icons.Material.Filled.Delete"
+                                   Color=Color.Error
+                                   Size=Size.Small
+                                   Variant="Variant.Filled"
+                                   OnClick="()=>DoDeleteAction(context)">
+                            Delete
+                        </MudButton>
+                    </MudTooltip>
+                 
+                </MudStack>
+            </MudTd>
+        </RowTemplate>
+
+    </MudTable>
+</div>
+}
+
+<style>
+    /*  #Active{
+                                background:#F5F5F5;
+                            }*/
+    .mud-table-striped .mud-table-container .mud-table-root .mud-table-body .mud-table-row:nth-of-type(even) {
+        background-color: #F1F1F1;
+    }
+
+        .mud-table-striped .mud-table-container .mud-table-root .mud-table-body .mud-table-row:nth-of-type(even) td {
+            color: #000
+        }
+
+        .mud-table-striped .mud-table-container .mud-table-root .mud-table-body .mud-table-row:nth-of-type(even):hover {
+            background-color: #F1F1F1;
+        }
+
+    .mud-table-root .mud-table-body:last-child .mud-table-row:last-child .mud-table-cell {
+        border-bottom: 1px solid #ffffff1e;
+    }
+
+    .mud-table-cell {
+        border: 1px solid #ffffff1e;
+    }
+
+    #info_button {
+        background: #17a2b8;
+    }
+
+        #info_button span.mud-button-label {
+            color: #fff;
+        }
+
+ 
+</style>

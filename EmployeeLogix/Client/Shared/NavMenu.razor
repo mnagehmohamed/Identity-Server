@@ -1,0 +1,318 @@
+﻿@inherits LayoutComponentBase
+@layout MainLayout
+<AuthorizeView>
+    <Authorized>
+        <MudNavMenu Class="side-menu"
+                    Color="Color.Info"
+                    Style="margin-top:15px">
+            <MudTooltip Placement="Placement.End" Arrow Text="Dashboard">
+                <MudNavLink id="SideMenu_Dashboard_Icon" Href="/Dashboard" Match="NavLinkMatch.All" Icon="@Icons.Filled.Dashboard">Dashboard</MudNavLink>
+            </MudTooltip>
+
+            <MudNavGroup id="Company_Structure_Title_Icon" Title="HR-Employees" Icon="fas fa-building">
+                <MudTooltip Placement="Placement.End" Arrow Text="Employees">
+                    <MudNavLink Href="/EmployeePage" Match="NavLinkMatch.Prefix" Icon="fa-solid fa-location-dot">Employees</MudNavLink>
+                </MudTooltip>
+                <MudTooltip Placement="Placement.End" Arrow Text="Users">
+                    <MudNavLink Href="/Users" Match="NavLinkMatch.Prefix" Icon="fa-solid.fa-user-group">Users</MudNavLink>
+                </MudTooltip>
+
+
+
+                </MudNavGroup>
+
+
+                </MudNavMenu>
+    </Authorized>
+    <NotAuthorized>
+
+    </NotAuthorized>
+</AuthorizeView>
+
+<style>
+    #SideMenu_Dashboard_Icon svg.mud-icon-root.mud-icon-default.mud-svg-icon.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default {
+        color: #4FBCD7;
+    }
+
+    #Company_Structure_Title_Icon button span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-building {
+        color: #61c2f3;
+        font-size: 19px;
+    }
+
+    #Company_Structure_Title_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(1) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-location-dot {
+        color: #4388cd !important;
+        font-size: 19px;
+    }
+
+    #Company_Structure_Title_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(2) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-code-branch {
+        color: #4388cd !important;
+        font-size: 19px;
+    }
+
+    #Company_Structure_Title_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(3) a svg.mud-icon-root.mud-icon-default.mud-svg-icon.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default {
+        color: #4388cd !important;
+        font-size: 19px;
+    }
+
+    #SideMenu_HROrganization_Icon button span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-people-group {
+        color: #95CD41;
+        font-size: 19px;
+    }
+
+    #SideMenu_HROrganization_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(1) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-business-time {
+        color: #229f22;
+        font-size: 19px;
+    }
+
+    #SideMenu_HROrganization_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(2) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-receipt {
+        color: #229f22;
+        font-size: 19px;
+    }
+
+    #SideMenu_HROrganization_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(3) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-address-card {
+        color: #229f22;
+        font-size: 19px;
+    }
+
+    #SideMenu_HROrganization_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(4) a svg.mud-icon-root.mud-icon-default.mud-svg-icon.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default {
+        color: #229f22;
+        font-size: 19px;
+    }
+
+    #SideMenu_HROrganization_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(5) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-hard-hat {
+        color: #229f22;
+        font-size: 19px;
+    }
+
+    #SideMenu_Users_Icon a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-user-group {
+        color: #F6D860;
+        font-size: 19px;
+    }
+
+    #SideMenu_Suppliers_Icon button span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-chalkboard-user {
+        color: #EA5C2B;
+        font-size: 19px;
+    }
+
+    #SideMenu_Suppliers_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(1) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-industry {
+        color: #c94010;
+        font-size: 19px;
+    }
+
+    #SideMenu_Suppliers_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(2) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-bezier-curve {
+        color: #c94010;
+        font-size: 19px;
+    }
+
+    #SideMenu_Components_Icon button svg.mud-icon-root.mud-icon-default.mud-svg-icon.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default {
+        color: #d72191;
+        font-size: 19px;
+    }
+
+    #SideMenu_Components_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(1) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-people-group {
+        color: #890657;
+        font-size: 19px;
+    }
+
+    #SideMenu_Components_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(2) a svg.mud-icon-root.mud-icon-default.mud-svg-icon.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default {
+        color: #890657;
+        font-size: 19px;
+    }
+
+    #SideMenu_Assets_Icon button span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-house-chimney {
+        color: #BFA2DB;
+        font-size: 19px;
+    }
+
+    #SideMenu_Assets_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(1) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-people-group {
+        color: #8b49cb;
+        font-size: 19px;
+    }
+
+    #SideMenu_Assets_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(2) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-quote-left {
+        color: #8b49cb;
+        font-size: 19px;
+    }
+
+    #SideMenu_Assets_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(3) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-users-gear {
+        color: #8b49cb;
+        font-size: 19px;
+    }
+
+    #SideMenu_Assets_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(4) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-building-un {
+        color: #8b49cb;
+        font-size: 19px;
+    }
+
+    #SideMenu_Assets_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(5) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-house-crack {
+        color: #8b49cb;
+        font-size: 19px;
+    }
+
+    #SideMenu_Assets_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(6) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-house-user {
+        color: #8b49cb;
+        font-size: 19px;
+    }
+
+    #Customers_Title_Icon button span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa.fa-users {
+        color: #495C83;
+        font-size: 19px;
+    }
+
+    #Customers_Title_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(1) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-arrows-down-to-people {
+        color: #22448b;
+        font-size: 19px;
+    }
+
+    #Customers_Title_Icon .mud-navmenu.mud-navmenu-default.mud-navmenu-margin-none .mud-tooltip-root.mud-tooltip-inline:nth-child(2) a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-users {
+        color: #22448b;
+        font-size: 19px;
+    }
+
+    #Assets_Rental_Icon a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-building-user {
+        color: #d5df49;
+        font-size: 19px;
+    }
+
+    #Contracts_Icon a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-file-signature {
+        color: #427c6f;
+        font-size: 19px;
+    }
+
+    #Request_Icon a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-cogs {
+        color: #95CD41;
+        font-size: 19px;
+    }
+
+    #Assets_Sale_Icon a span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-bookmark {
+        color: #22448b;
+        font-size: 19px;
+    }
+
+    #sideMenue_Base_Module_Icon button span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-building {
+        color: #61c2f3;
+    }
+
+    #sideMenue_Rental_Icon button span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-building-user {
+        color: #d5df49;
+    }
+
+    #sideMenue_SaleModule_Icon button span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fas.fa-building {
+        color: #1D6699;
+    }
+
+    #sideMenue_Maintenance_Icon button span.mud-icon-root.mud-icon-default.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon-default.fa-solid.fa-screwdriver-wrench {
+        color: #00ACC1;
+    }
+    /*	 span.mud-icon-root {
+                                    color:#3299FF  !important;
+                                }
+                                #SideMenu_Components_Icon .mud-icon-root.mud-icon-default.mud-svg-icon.mud-icon-size-medium.mud-nav-link-icon.mud-nav-link-icon{
+                                            color:#3299FF  !important;
+
+                                }*/
+    /*#SideMenu_HROrganization_Icon span.mud-icon-root.mud-info-text.mud-icon-size-medium.mud-nav-link-icon.fa-solid.fa-people-group {
+                                color: #3B9AE1 !important;
+                            }*/
+</style>
+@code {
+    string arrowIcon =>  Icons.Outlined.ArrowCircleLeft;
+
+
+    protected async override Task OnInitializedAsync()
+    {
+
+        await base.OnInitializedAsync();
+    }
+
+
+}
+
+<style>
+    .mud-nav-link-text {
+        font-weight: bold !important;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Employees</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Dashboard
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="EmployeePage">
+                <span class="oi oi-plus" aria-hidden="true"></span> Employees
+            </NavLink>
+        </div>
+
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
+*@

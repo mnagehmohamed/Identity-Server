@@ -1,0 +1,73 @@
+﻿<MudDialog>
+    <TitleContent>
+
+        <MudText Typo="Typo.h6">
+            <MudStack Row="true">
+                <MudIcon Color="Color.Info" Icon="@Icons.Material.Filled.Info" Class="mr-3 mb-n1" />
+                <p Style="font-weight:bold">User Information</p>
+            </MudStack>
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <div class="pa-4" style="max-height: 80vh;overflow: auto;">
+
+            <MudGrid Spacing="1">
+                <MudItem xs="12" sm="12" md="6">
+                    <MudPaper Elevation="SectionElevationLevel" Class=" pa-3">
+                        <MudStack Row="true">
+                            <MudText Typo="TextTypo" Class="SectionHeader">
+                                User Name :
+                            </MudText>
+                            <MudText Typo="TextTypo">
+                                @entity.UserName
+                            </MudText>
+                        </MudStack>
+
+                    </MudPaper>
+                </MudItem>
+                <MudItem xs="12" sm="12" md="6">
+                    <MudPaper Elevation="SectionElevationLevel" Class="pa-3">
+                        <MudStack Row="true">
+                            <MudText Typo="TextTypo" Class="SectionHeader">
+                                Email :
+                            </MudText>
+                            <MudText Typo="TextTypo">
+                                @entity.Email
+                            </MudText>
+                        </MudStack>
+
+                    </MudPaper>
+                </MudItem>
+                <MudItem xs="12" sm="12" md="6">
+                    <MudPaper Elevation="SectionElevationLevel" Class="pa-3">
+                        <MudStack Row="true">
+                            <MudText Typo="TextTypo" Class="SectionHeader">
+                                Confirm Email:
+                            </MudText>
+                            <MudText Typo="TextTypo">
+                                @entity.EmailConfirmed
+                            </MudText>
+                        </MudStack>
+
+                    </MudPaper>
+                </MudItem>
+              
+            </MudGrid>
+        </div>
+
+    </DialogContent>
+</MudDialog>
+
+<style>
+    .SectionHeader {
+        font-weight: bolder;
+        color: cadetblue
+    }
+</style>
+@code
+{
+    private Typo TextTypo = Typo.body1;
+    private int SectionElevationLevel = 3;
+}
+
+

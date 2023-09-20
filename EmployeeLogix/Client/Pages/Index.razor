@@ -1,0 +1,148 @@
+﻿@page "/Dashboard"
+<AuthorizeView>
+    <Authorized>
+        <div>
+
+            <MudText Typo="Typo.h6" Style="font-weight:bold" Class="mt-10">Employee Dashboard</MudText>
+            <MudGrid Spacing="2">
+                <MudItem xs="12" sm="12" md="6">
+                    <MudPaper Class="px-2 py-5 "
+                              Style="color:white;background-color:green">
+                        <MudIcon Icon="@Icons.Filled.SupervisedUserCircle" Title="Favorite" />
+
+                        <MudStack AlignItems="AlignItems.Center"
+                                  Justify="Justify.Center">
+                            <MudText Typo="Typo.h2">@dashboarddata.UsersActiveCount.ToString()</MudText>
+
+                            <MudText Typo="Typo.h5">Active Employee</MudText>
+
+                        </MudStack>
+
+                    </MudPaper>
+                </MudItem>
+                <MudItem xs="12" sm="12" md="6">
+                    <MudPaper Class="px-2 py-5"
+                              Style="color:white;background-color:red">
+                        <MudIcon Icon="@Icons.Filled.VerifiedUser" Title="Favorite" />
+
+                        <MudStack AlignItems="AlignItems.Center"
+                                  Justify="Justify.Center">
+                            <MudText Typo="Typo.h2">@dashboarddata.UsersInActiveCount.ToString()</MudText>
+                            <MudText Typo="Typo.h5">In Active Employee</MudText>
+
+                        </MudStack>
+
+                    </MudPaper>
+                </MudItem>
+
+
+                <MudItem xs="12" sm="12" md="6">
+
+                    <MudPaper Class="px-2 py-5" Style="align-content:center">
+                        <MudImage Style="align-content:center" Src="Images/users.png" Width="332" Height="250" Alt="Swedish Farm House" Elevation="25" Class="rounded-lg ma-4" />
+                    </MudPaper>
+
+                </MudItem>
+                <MudItem xs="12" sm="12" md="6">
+
+                    <MudPaper Class="px-2 py-5" Style="align-content:center">
+                        <MudImage Style="align-content:center" Src="Images/users2.png" Width="332" Height="250" Alt="Swedish Farm House" Elevation="25" Class="rounded-lg ma-4" />
+                    </MudPaper>
+
+                </MudItem>
+
+                <MudItem xs="12" sm="12" md="12">
+
+                    <Animate Animation="Animations.ZoomIn" Duration="TimeSpan.FromSeconds(0.5)" Delay="TimeSpan.FromSeconds(1)">
+                        <MudText Align="Align.Center"
+                                 Typo="Typo.h6">
+                            <MudImage Style="align-content:center" Src="Images/manager.png" Width="50" Height="50" Alt="Swedish Farm House" Elevation="25" Class="rounded-lg ma-4" />                   Welcome To Employees
+                        </MudText>
+                    </Animate>
+
+                </MudItem>
+                <MudItem xs="12" sm="12" md="12">
+
+                    <Animate Animation="Animations.ZoomIn" Duration="TimeSpan.FromSeconds(0.5)" Delay="TimeSpan.FromSeconds(1)">
+                        <MudButton Class="centered-button"
+                                   OnClick="GoToEmployee"
+                                          FullWidth
+                                   ButtonType="ButtonType.Submit"
+                                   Variant="Variant.Filled"
+                                   Color="Color.Primary">
+                            Go To Employees Page
+                        </MudButton>
+                        </Animate>
+
+                        </MudItem>
+                        </MudGrid>
+
+                    </div>
+    </Authorized>
+    <NotAuthorized>
+                    <div class="d-flex align-center justify-space-between mt-0">
+                        <MudImage Style="margin:auto" Src="Images/notauthorized.png" Width="332" Height="250" Alt="Swedish Farm House" Elevation="25" Class="rounded-lg ma-4" />
+
+                    </div>
+    </NotAuthorized>
+</AuthorizeView>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<MudCard>
+
+    <MudCardContent>
+        <MudText
+            Align="Align.Center"
+            Typo="Typo.h6">
+            
+            <MudIcon Color="Color.Primary" Icon="@Icons.Material.Filled.Slideshow" Class="mr-3 mb-n1" />
+            Welcome To Employees 
+        </MudText>
+    </MudCardContent>
+    <MudCardActions>
+        <MudButton Class="centered-button"
+            OnClick="GoToEmployee"
+            ButtonType="ButtonType.Submit"
+                   Variant="Variant.Filled"
+                   Color="Color.Primary">
+            Go To Employees Page
+        </MudButton>
+    </MudCardActions>
+</MudCard>*@

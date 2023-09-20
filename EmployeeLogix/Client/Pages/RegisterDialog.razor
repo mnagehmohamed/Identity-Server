@@ -1,0 +1,91 @@
+﻿<MudDialog>
+    <TitleContent>
+
+            <MudText Typo="Typo.h6">
+
+                <MudIcon Color="Color.Info" Icon="@Icons.Material.Filled.Add" Class="mr-3 mb-n1" />
+                Register
+
+            </MudText>
+
+        
+    </TitleContent>
+    <DialogContent>
+        <MudContainer Style="max-height: 80vh;overflow-y: scroll;" Class="py-1">
+            <EditForm Model="@entity" OnValidSubmit="DoSubmit">
+                <DataAnnotationsValidator />
+                <MudCard>
+                    <MudCardContent>
+
+                        <MudGrid>
+
+                            <MudItem xs="12" sm="12" Class="py-0">
+                                <MudTextField Label="Email"
+                                              MaxLength=50
+                                              HelperText="Please Insert Email"
+                                                    HelperTextOnFocus
+                                              @bind-Value="entity.Email"
+                                              For="@(() => entity.Email)"
+                                              Variant="Variant.Outlined"
+                                              Margin="Margin.Dense"
+                                              Adornment="Adornment.End" AdornmentIcon=@(!string.IsNullOrEmpty(entity.Email)?(@Icons.Material.Filled.CheckCircle):"") AdornmentColor="Color.Success" />
+                                </MudItem>
+                                <MudItem xs="12" sm="12" Class="py-0">
+                                <MudTextField Label="User Name"
+                                              MaxLength=50
+                                              HelperText="Please Insert User Name"
+                                                    HelperTextOnFocus
+                                              @bind-Value="entity.UserName"
+                                              For="@(() => entity.UserName)"
+                                              Variant="Variant.Outlined"
+                                              Margin="Margin.Dense"
+                                              Adornment="Adornment.End" AdornmentIcon=@((!string.IsNullOrEmpty(entity.UserName))?(@Icons.Material.Filled.CheckCircle):"") AdornmentColor="Color.Success" />
+                                </MudItem>
+                                <MudItem xs="12" sm="6" Class="py-0">
+                                <MudTextField Label="Password"
+                                              MaxLength=50
+                                              HelperText="Please Insert Password"
+                                                    HelperTextOnFocus
+                                              @bind-Value="entity.Password"
+                                              For="@(() => entity.Password)"
+                                              Variant="Variant.Outlined"
+                                              InputType="InputType.Password"
+                                              Margin="Margin.Dense"
+                                              Adornment="Adornment.End" AdornmentIcon=@(!string.IsNullOrEmpty(entity.Password)?(@Icons.Material.Filled.CheckCircle):"") AdornmentColor="Color.Success" />
+                                </MudItem>
+
+                                <MudItem xs="12" sm="6" Class="py-0">
+                                <MudTextField Label="ConfirmPassword"
+                                              MaxLength=50
+                                              HelperText="Please Insert ConfirmPassword"
+                                                    HelperTextOnFocus
+                                              Adornment="Adornment.End" AdornmentIcon=@entity.Password AdornmentColor="Color.Success"
+                                              @bind-Value="entity.ConfirmPassword"
+                                              For="@(() => entity.ConfirmPassword)"
+                                              InputType="InputType.Password"
+                                              Variant="Variant.Outlined"
+                                              Margin="Margin.Dense" />
+                                </MudItem>
+
+                               
+
+                        </MudGrid>
+
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton ButtonType="ButtonType.Submit"
+                                   Variant="Variant.Filled"
+                                      FullWidth
+                                   Color=Color.Primary>
+                         
+                               Register
+                           
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+
+            </EditForm>
+        </MudContainer>
+
+    </DialogContent>
+</MudDialog>

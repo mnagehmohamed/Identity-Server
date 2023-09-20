@@ -1,0 +1,66 @@
+﻿@page "/"
+@layout MainLayout
+
+<PageTitle>Login</PageTitle>
+
+<div class="d-flex justify-center align-content-center flex-wrap" style="height:100vh">
+
+    <MudStack Justify="Justify.Center"
+              AlignItems="AlignItems.Center"
+              Spacing="0">
+        <MudImage Src="Images/manager.png"
+                  Alt="logo"
+                  Elevation="0"
+                  Height="100" />
+
+
+
+
+        <MudPaper Class="pa-4 mt-5" Elevation="7" MinWidth="350px">
+
+            <MudText Align="Align.Center" Typo="Typo.h4" Class="mb-4">Login</MudText>
+
+            <EditForm Model="@entity" OnValidSubmit="DoLogin">
+                <DataAnnotationsValidator />
+                <MudTextField @bind-Value="entity.UserName"
+                              For="@(() => entity.UserName)"
+                              Label="User Name"
+                              MaxLength=50
+                              HelperText="Plaese Enter User Name"
+                              Variant="Variant.Outlined"
+                              Margin="Margin.Dense"
+                                    HelperTextOnFocus />
+                <MudTextField @bind-Value="entity.Password"
+                              For="@(() => entity.Password)"
+                              Label="Password"
+                              MaxLength=50
+                              HelperText="Plaese Insert Password"
+                              Variant="Variant.Outlined"
+                              InputType="InputType.Password"
+                              Margin="Margin.Dense"
+                                    HelperTextOnFocus />
+                <div class="d-flex align-center justify-space-between mt-0">
+                    <MudCheckBox 
+                                 @bind-Checked="@Rememberme"
+                                 @onchange="CheckRemember"
+                                 Class="ml-n1"
+                                 Size="Size.Small"
+                                          Dense
+                                 Color="Color.Dark"
+                                 Label="Remeber Me" />
+                    <MudLink Typo="Typo.body2">Forget Password</MudLink>
+                </div>
+                <MudButton Variant="Variant.Filled"
+                           Color="Color.Dark"
+                              FullWidth
+                           ButtonType="ButtonType.Submit"
+                           Class="mt-6">Login</MudButton>
+                </EditForm>
+             
+        </MudPaper>
+    </MudStack>
+
+
+
+
+</div>

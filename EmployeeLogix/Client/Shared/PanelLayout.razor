@@ -1,0 +1,67 @@
+﻿
+@inherits LayoutComponentBase
+
+
+<MudLayout>
+    <MudAppBar Dense=true Elevation="1" Color="Color.Info">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudSpacer />
+        <MudTooltip Placement="Placement.Bottom"
+                    Arrow
+                    Text="Employees"
+                    RootStyle="width: fit-content;"
+                    Inline>
+            <MudIconButton Icon="@Icons.Material.Filled.VerifiedUser"
+                           aria-label="Employees"
+                           Color=Color.Inherit
+                           Size=Size.Medium
+                            />
+        </MudTooltip>
+       
+    </MudAppBar>
+    <MudDrawer DisableOverlay
+               Open=_drawerOpen
+               ClipMode="DrawerClipMode.Always"
+               Breakpoint=Breakpoint.Md
+               OpenMiniOnHover
+               Elevation="2"
+               Variant="DrawerVariant.Mini">
+        @if (_drawerOpen)
+        {
+            <MudImage Fluid
+                  Src="Images/manager.png"
+                  Alt="logo"
+                  Elevation="0"
+                  Class="mt-10 mx-3 mb-1" />
+            @*   <MudText Align="Align.Center" Typo="Typo.h5" Style="font-weight:500">@localization["TechnicalSupport"]</MudText>*@
+        }
+
+        <SideMenu />
+    </MudDrawer>
+    <MudMainContent Class="px-5 pt-4" Style="padding-top:0px">
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+<style>
+    .mud-tooltip-root.mud-tooltip-inline {
+        width: 100%;
+    }
+</style>
+
+@code {
+    bool _drawerOpen = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    
+
+
+}

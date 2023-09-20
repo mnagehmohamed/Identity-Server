@@ -1,0 +1,262 @@
+﻿@using EmployeeLogix.Client.Pages;
+@using EmployeeLogix.Client.Services;
+@using EmployeeLogix.Shared.Dtos;
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inherits LayoutComponentBase
+
+
+
+
+<MudLayout>
+    <MudAppBar Dense=true Elevation="1" Color="Color.Info">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudSpacer />
+        <AuthorizeView>
+            <Authorized>
+               
+                <MudTooltip Placement="Placement.Bottom"
+                                Arrow
+                            Text="Account Settings"
+                            RootStyle="width: fit-content;"
+                                Inline>
+
+                    <MudMenu Icon="@Icons.Material.Filled.AccountCircle"
+                             Color="Color.Inherit"
+                             AnchorOrigin="Origin.BottomCenter"
+                             TransformOrigin="Origin.TopRight">
+
+                        <MudStack Justify="Justify.Center"
+                                  AlignItems="AlignItems.Center"
+                                  Spacing="0"
+                                  Class="mb-3 mt-2">
+                                  
+                            <MudText Typo="Typo.body1">@context.User.FindFirst(ClaimTypes.Name).Value</MudText>
+                            </MudStack>
+                            <MudDivider DividerType="DividerType.FullWidth"
+                                    Class="mb-1" />
+                            @*   <MudMenuItem>@localization["ChangePassword"]</MudMenuItem>*@
+                            <MudMenuItem >Change Password</MudMenuItem>
+                            <MudStack Class="px-2 mt-1">
+                                <MudButton Variant="Variant.Filled"
+                                          FullWidth
+                                       Color="Color.Error"
+                                       OnClick="DoLogout">
+                                Log Out
+                            </MudButton>
+                            </MudStack>
+
+                            </MudMenu>
+                            </MudTooltip>
+            </Authorized>
+            <NotAuthorized>
+                            <MudTooltip Placement="Placement.Bottom"
+                                Arrow
+                            Text="Account Settings"
+                            RootStyle="width: fit-content;"
+                                Inline>
+
+                    <MudMenu Icon="@Icons.Material.Filled.AccountCircle"
+                             Color="Color.Inherit"
+                             AnchorOrigin="Origin.BottomCenter"
+                             TransformOrigin="Origin.TopRight">
+
+                        <MudStack Justify="Justify.Center"
+                                  AlignItems="AlignItems.Center"
+                                  Spacing="0"
+                                  Class="mb-3 mt-2">
+
+                            <MudButton Variant="Variant.Filled"
+                                          FullWidth
+                                       Color="Color.Info"
+                                       OnClick="DoRegister">
+                                Register
+                            </MudButton>
+                        </MudStack>
+                        <MudDivider DividerType="DividerType.FullWidth"
+                                    Class="mb-1" />
+                   
+                        <MudStack Class="px-2 mt-1">
+                            <MudButton Variant="Variant.Filled"
+                                          FullWidth
+                                       Color="Color.Success"
+                                       OnClick="DoLogin">
+                                Log In
+                            </MudButton>
+                            </MudStack>
+
+                            </MudMenu>
+                            </MudTooltip>
+                      
+            </NotAuthorized>
+        </AuthorizeView>
+       @* <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudSpacer />
+        <MudTooltip Placement="Placement.Bottom"
+                    Arrow
+                    Text="Employees"
+                    RootStyle="width: fit-content;"
+                    Inline>
+            <MudIconButton Icon="@Icons.Material.Filled.VerifiedUser"
+                           aria-label="Employees"
+                           Color=Color.Inherit
+                           Size=Size.Medium
+                            />
+        </MudTooltip>
+<AuthorizeView>
+    <Authorized>
+                <MudTooltip Placement="Placement.Bottom"
+                                Arrow
+                            Text="Employees"
+                            RootStyle="width: fit-content;"
+                                Inline>
+                    <MudText Typo="Typo.h6" Style="color:white">@context.User.FindFirst(ClaimTypes.Name).Value</MudText>
+                </MudTooltip>
+    </Authorized>
+</AuthorizeView>*@
+    </MudAppBar>
+    <MudDrawer DisableOverlay
+               Open=_drawerOpen
+               ClipMode="DrawerClipMode.Always"
+               Breakpoint=Breakpoint.Md
+               OpenMiniOnHover
+               Elevation="2"
+               Variant="DrawerVariant.Mini">
+        @if (_drawerOpen)
+        {
+            <MudImage Fluid
+                  Src="Images/manager.png"
+                  Alt="logo"
+                  Elevation="0"
+                  Class="mt-10 mx-3 mb-1" />
+            @*   <MudText Align="Align.Center" Typo="Typo.h5" Style="font-weight:500">@localization["TechnicalSupport"]</MudText>*@
+        }
+        <div class="side-menu">
+        <NavMenu />
+    </div>
+        <SideMenu />
+    </MudDrawer>
+    <MudMainContent Class="px-5 pt-4" Style="padding-top:0px">
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+<style>
+    .mud-tooltip-root.mud-tooltip-inline {
+        width: 100%;
+    }
+</style>
+
+@code {
+    bool _drawerOpen = true;
+    [Inject]
+    IDialogService dialogService { get; set; }
+    [Inject]
+    ISnackbar snackbar { get; set; }
+    [Inject]
+    NavigationManager navigationManager { get; set; }
+    [Inject]
+    public IAuthenticatedService authenticatedService { get; set; }
+    public bool RegistrationError { get; set; }
+    public IEnumerable<string> Errors { get; set; }
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+    protected override async void OnInitialized()
+    {
+        base.OnInitialized();
+        var authState = await AuthenticationStateProvider
+            .GetAuthenticationStateAsync();
+        var identity = authState.User?.Identity;
+        if(identity !=null)
+        {
+            if(identity.IsAuthenticated)
+            {
+                navigationManager.NavigateTo("Dashboard");
+            }
+        }
+    }
+
+    private async void DoLogout()
+    {
+        await authenticatedService.Logout();
+        navigationManager.NavigateTo("/");
+
+    }
+    private void DoLogin() 
+    {
+        navigationManager.NavigateTo("/");
+    }
+    private async void DoRegister()
+    {
+        
+        RegistrationError = false;
+        DialogOptions dialogOptions = new DialogOptions()
+        {
+                FullWidth = true,
+                Position = DialogPosition.Center,
+                CloseButton = true,
+                CloseOnEscapeKey = false,
+                DisableBackdropClick = true,
+                MaxWidth = MaxWidth.Small,
+                ClassBackground = "blurred-dialog"
+        };
+
+
+        var dialog = dialogService.Show<RegisterDialog>("Create", dialogOptions);
+        var result = await dialog.Result;
+        if (!result.Canceled)
+        {
+            var sendValue = result.Data as RegistrationUser;
+            var status = await authenticatedService.Register(sendValue);
+            if (!status.isSuccessfull)
+            {
+                Errors = status.errors;
+                RegistrationError = true;
+            }
+            else 
+            {
+                navigationManager.NavigateTo("/");
+                snackbar.Add("User Register Successfully", Severity.Success);
+            }
+        }
+
+    }
+//    var serverValue = await DoCheckExist(employee);
+//        // Check Existance
+//        if (serverValue == null)
+//        {
+//            snackbar.Add("Employee Not Found", Severity.Warning);
+//           await GetAllEmployees();
+//            return;
+//        }
+//    var parameters = new DialogParameters
+//    {
+
+//        ["entity"] = serverValue
+//    };
+//    DialogOptions dialogOptions = new DialogOptions()
+//    {
+//        MaxWidth = MaxWidth.Medium,
+//        CloseButton = true,
+//        Position = DialogPosition.Center
+//    };
+
+//    var dialog = dialogService.Show<EditEmployee>("Update", parameters, dialogOptions);
+//    var result = await dialog.Result;
+//        if (!result.Canceled)
+//        {
+//            var sendValue = result.Data as Employee;
+//    var status = await employeeService.UpdateEmployee(sendValue);
+//    await GetAllEmployeesForEditAndDelete();
+//    snackbar.Add($"Employee {employee.Name} uUpdated Successfully", Severity.Info);
+//            StateHasChanged();
+//}
+    
+
+
+}
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />

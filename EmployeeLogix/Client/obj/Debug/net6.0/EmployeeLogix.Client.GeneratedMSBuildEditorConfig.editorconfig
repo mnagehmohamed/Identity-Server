@@ -1,0 +1,73 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = EmployeeLogix.Client
+build_property.RootNamespace = EmployeeLogix.Client
+build_property.ProjectDir = C:\Users\programmer18\Downloads\EmployeeLogix\EmployeeLogix\EmployeeLogix\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\programmer18\Downloads\EmployeeLogix\EmployeeLogix\EmployeeLogix\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Pages/AddEditUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkRWRpdFVzZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Pages/EditEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEVtcGxveWVlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Pages/EmployeeList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Pages/InfoUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mb1VzZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Pages/LoginPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Pages/RegisterDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJEaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Pages/UsersList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Shared/PanelLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhbmVsTGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-3ewf7eoq3e
+
+[C:/Users/programmer18/Downloads/EmployeeLogix/EmployeeLogix/EmployeeLogix/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-evsze9tlav

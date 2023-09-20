@@ -1,0 +1,125 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\obj\\Debug\\net6.0\\build-gz\\8FVovIHB.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EmployeeLogix.Client.styles.css",
+      "PackagePath": "staticwebassets\\EmployeeLogix.Client.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\obj\\Debug\\net6.0\\service-worker-assets.js",
+      "PackagePath": "staticwebassets\\service-worker-assets.js"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\obj\\Debug\\net6.0\\service-worker\\service-worker.published.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\Images\\manager.png",
+      "PackagePath": "staticwebassets\\Images\\manager.png"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\Images\\notauthorized.png",
+      "PackagePath": "staticwebassets\\Images\\notauthorized.png"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\Images\\users.png",
+      "PackagePath": "staticwebassets\\Images\\users.png"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\Images\\users2.png",
+      "PackagePath": "staticwebassets\\Images\\users2.png"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\programmer18\\Downloads\\EmployeeLogix\\EmployeeLogix\\EmployeeLogix\\Client\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.EmployeeLogix.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.EmployeeLogix.Client.props",
+      "PackagePath": "build\\EmployeeLogix.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.EmployeeLogix.Client.props",
+      "PackagePath": "buildMultiTargeting\\EmployeeLogix.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.EmployeeLogix.Client.props",
+      "PackagePath": "buildTransitive\\EmployeeLogix.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
